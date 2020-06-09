@@ -33,6 +33,39 @@ mark{
 <marquee><mark>Welcome to My Web Page</marquee></h1></mark>
 <br>
 <br>
+<center>
+<style>
+div.heart{
+	color: FFFFFF;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+div.result{
+	background-color: FFFFFF;
+}
+</style>
+<div class="heart">Vote here if you like this page
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 0;
+    }
+    document.getElementById("result").innerHTML = " " + localStorage.clickcount + " ";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+
+
+<button onclick="clickCounter()" type="button" button style="font-size:16px;color:red"><i class="fa fa-heart">
+<div id="result"></div>
+</i></button>
+</div>
+</center>
 
 <style>
 div.headline{
@@ -42,9 +75,6 @@ div.headline{
 }
 </style>
 <div class="headline">
-<iframe width="400" height="190" align="right"
-src="https://www.youtube.com/embed/A0Gb2fvjKYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
 
 HI! I'm Dipayan Paul<br>
 I'm Coding Enthusiast</div>
@@ -69,12 +99,13 @@ div.container{
 	color: FFFFFF;
 	border-style: solid;
 	font-family: "Times New Roman", Times, serif;
+	overflow: visible;
 }
 </style>
 <div class="container">
 
     <div id="image" style="float:left;">
-     <img src="my9.jpeg" width="285" height="403" align="left"/>
+     <img src="my9.jpeg" width="305" height="420" align="left"/>
     </div>
 
     <div id="texts" style="float:center;"> 
@@ -88,7 +119,8 @@ div.container{
     <li>TEAM MANAGEMENT</li>
     <br> I'm a Hard-Working student with highly dedicated to my assigned work with better Leadership Skills and will be available for Hiring from 2020.<br></h3>
     <h2>I Hope you will like my work, and contact me. <br>
-     Thank You</h2></center>
+     Thank You</h2>
+<br></center>
     </div>
 
 </div>
@@ -217,6 +249,7 @@ table td {
 </center></table></h4>
 <br>
 <br>
+<br>
 
 <style>
 table {
@@ -327,6 +360,12 @@ input[type=submit]:hover {
 -->
 
 
+<iframe width="400" height="190" align="right"
+src="https://www.youtube.com/embed/A0Gb2fvjKYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<caption>A Motivational Video"</caption>
+</iframe>
+<br>
+<br>
 
 
 <style>

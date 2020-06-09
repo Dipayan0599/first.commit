@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Trail</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<center><h1>This is a trail page!! </h1></center>
+<br>
+<br>
+<br>
+<br>
+<center>
+
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 0;
+    }
+    document.getElementById("result").innerHTML = " " + localStorage.clickcount + " ";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+
+
+<button onclick="clickCounter()" type="button" button style="font-size:16px;color:red"><i class="fa fa-heart">
+<div id="result"></div>
+</i></button>
+
+
+
+
+</center>
+</body>
+</html>
